@@ -1,11 +1,12 @@
 # NAME: AI (Merged & Optimized)
-# DESCRIPTION: OpenAI + Google Gemini + Anthropic + Copilot + Perplexity + Cursor + All Mainstream AI Services + SentX AI
+# DESCRIPTION: OpenAI + Google Gemini + Anthropic + Copilot + Perplexity + Cursor + Mainstream AI Services + SentX AI
 # POLICY: AI
-# UPDATE:2026/8/19
+# UPDATE: 2026/8/19
 
 # ========================================
 # SECTION 1: INFRASTRUCTURE & MONITORING
 # ========================================
+
 DOMAIN,api.statsig.com
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,cdn.usefathom.com
@@ -30,34 +31,41 @@ DOMAIN-SUFFIX,stripe.com
 # ========================================
 # SECTION 2: OPENAI / CHATGPT
 # ========================================
-DOMAIN,browser-intake-datadoghq.com
+
+AND,((DOMAIN-KEYWORD,chatgpt-async-webps-prod-),(DOMAIN-SUFFIX,webpubsub.azure.com))
+AND,((DOMAIN-KEYWORD,openaicom-api-),(DOMAIN-SUFFIX,azurefd.net))
+
 DOMAIN,chat.openai.com.cdn.cloudflare.net
 DOMAIN,openai-api.arkoselabs.com
+DOMAIN,openai.com.cdn.cloudflare.net
 DOMAIN,openai.qualtrics.com
 DOMAIN,openaiassets.blob.core.windows.net
 DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
 DOMAIN,openaicom.imgix.net
 DOMAIN,openaicomproductionae4b.blob.core.windows.net
 DOMAIN,production-openaicom-storage.azureedge.net
-DOMAIN-SUFFIX,ai.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,chatgpt.livekit.cloud
-DOMAIN-SUFFIX,host.livekit.cloud
+DOMAIN,chatgpt.livekit.cloud
+DOMAIN,host.livekit.cloud
 DOMAIN-SUFFIX,turn.livekit.cloud
+
+DOMAIN-SUFFIX,ai.com
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-DOMAIN-KEYWORD,openai
+DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,sora.com
 
-# OpenAI Specific IPs
-IP-CIDR,24.199.123.28/32
-IP-CIDR,64.23.132.171/32
-IP-ASN,20473
+# OpenAI specific IP
+IP-CIDR,24.199.123.28/32,no-resolve
+IP-CIDR,64.23.132.171/32,no-resolve
 
 # ========================================
 # SECTION 3: GOOGLE / GEMINI / DEEPMIND
 # ========================================
+
 DOMAIN,ai.google.dev
 DOMAIN,alkalicore-pa.clients6.google.com
 DOMAIN,alkalimakersuite-pa.clients6.google.com
@@ -65,10 +73,14 @@ DOMAIN,antigravity-pa.googleapis.com
 DOMAIN,antigravity.googleapis.com
 DOMAIN,cloudaicompanion.googleapis.com
 DOMAIN,daily-cloudcode-pa.googleapis.com
+DOMAIN,geller-pa.googleapis.com
 DOMAIN,makersuite.google.com
 DOMAIN,notebooklm-pa.googleapis.com
 DOMAIN,notebooklm.googleapis.com
+DOMAIN,proactivebackend-pa.googleapis.com
+DOMAIN,robinfrontend-pa.googleapis.com
 DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com
+
 DOMAIN-SUFFIX,aicode.googleapis.com
 DOMAIN-SUFFIX,aida.googleapis.com
 DOMAIN-SUFFIX,aisandbox-pa.googleapis.com
@@ -82,7 +94,6 @@ DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,flow.google
 DOMAIN-SUFFIX,g.ai
-DOMAIN-SUFFIX,geller-pa.googleapis.com
 DOMAIN-SUFFIX,gemini.google
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,gemini.gstatic.com
@@ -96,9 +107,8 @@ DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,notebooklm.google.com
 DOMAIN-SUFFIX,opal.google
 DOMAIN-SUFFIX,opal.google.com
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
 DOMAIN-SUFFIX,stitch.withgoogle.com
+
 DOMAIN-KEYWORD,colab
 DOMAIN-KEYWORD,developerprofiles
 DOMAIN-KEYWORD,generativelanguage
@@ -106,9 +116,11 @@ DOMAIN-KEYWORD,generativelanguage
 # ========================================
 # SECTION 4: ANTHROPIC / CLAUDE
 # ========================================
+
 DOMAIN,anthropic-com.ghost.io
 DOMAIN,anthropic.com.cdn.cloudflare.net
 DOMAIN,servd-anthropic-website.b-cdn.net
+
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,claude.ai
@@ -116,13 +128,20 @@ DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,claudemcpclient.com
 DOMAIN-SUFFIX,claudemcpcontent.com
 DOMAIN-SUFFIX,claudeusercontent.com
+
 DOMAIN-KEYWORD,anthropic
 DOMAIN-KEYWORD,claude
+
+# Claude IP
+IP-CIDR,160.79.104.0/23,no-resolve
+IP-CIDR6,2607:6bc0::/48,no-resolve
 
 # ========================================
 # SECTION 5: MICROSOFT / GITHUB COPILOT
 # ========================================
+
 DOMAIN,api.github.com
+DOMAIN,api.githubcopilot.com
 DOMAIN,copilot-proxy.githubusercontent.com
 DOMAIN,copilot-telemetry-service.githubusercontent.com
 DOMAIN,copilot-telemetry.githubusercontent.com
@@ -130,6 +149,7 @@ DOMAIN,copilot-workspace.githubnext.com
 DOMAIN,copilotprodattachments.blob.core.windows.net
 DOMAIN,sydney.bing.com
 DOMAIN,www.bing.com
+
 DOMAIN-SUFFIX,copilot-stg.com
 DOMAIN-SUFFIX,copilot.cloud.microsoft
 DOMAIN-SUFFIX,copilot.com
@@ -139,6 +159,7 @@ DOMAIN-SUFFIX,githubcopilot.com
 # ========================================
 # SECTION 6: PERPLEXITY AI
 # ========================================
+
 DOMAIN,ppl-ai-file-upload.s3.amazonaws.com
 DOMAIN,pplx-res.cloudinary.com
 DOMAIN-SUFFIX,duck.ai
@@ -149,6 +170,7 @@ DOMAIN-SUFFIX,pplx.ai
 # ========================================
 # SECTION 7: XAI / GROK
 # ========================================
+
 DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,grok.x.com
 DOMAIN-SUFFIX,grokipedia.com
@@ -157,6 +179,7 @@ DOMAIN-SUFFIX,x.ai
 # ========================================
 # SECTION 8: CURSOR & CODE EDITOR AI
 # ========================================
+
 DOMAIN-SUFFIX,cursor-cdn.com
 DOMAIN-SUFFIX,cursor.com
 DOMAIN-SUFFIX,cursor.sh
@@ -174,16 +197,21 @@ DOMAIN-SUFFIX,qoder.com
 DOMAIN-SUFFIX,trae.ai
 DOMAIN-SUFFIX,marscode.com
 
+# Trae API
+DOMAIN,trae-api-sg.mchost.guru
+
 # ========================================
 # SECTION 9: HUGGING FACE
 # ========================================
+
 DOMAIN-SUFFIX,hf.co
 DOMAIN-SUFFIX,hf.space
 DOMAIN-SUFFIX,huggingface.co
 
 # ========================================
-# SECTION 10: OPEN‑SOURCE & INFERENCE PLATFORMS
+# SECTION 10: OPEN-SOURCE & INFERENCE
 # ========================================
+
 DOMAIN-SUFFIX,groq.com
 DOMAIN-SUFFIX,ollama.com
 DOMAIN-SUFFIX,openrouter.ai
@@ -193,6 +221,7 @@ DOMAIN-SUFFIX,livekit.cloud
 # ========================================
 # SECTION 11: CHATBOTS & AI AGENTS
 # ========================================
+
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,poecdn.net
 DOMAIN-SUFFIX,coze.com
@@ -205,15 +234,26 @@ DOMAIN-SUFFIX,youmind.com
 DOMAIN-SUFFIX,youmind.site
 
 # ========================================
-# SECTION 12: AI CREATIVITY (Images, Video, 3D, Audio)
+# SECTION 12: AI CREATIVITY
 # ========================================
+
+# Apple Intelligence
 DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,apple-relay.mask.apple-dns.net
 DOMAIN,guzzoni.apple.com
-DOMAIN,imagine.meta.com
+
+DOMAIN-SUFFIX,apple-relay.akamaized.net
 DOMAIN-SUFFIX,apps.mzstatic.com
+DOMAIN-SUFFIX,cp4.cloudflare.com
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,gateway.icloud.com
+
+# Meta AI
+DOMAIN,imagine.meta.com
+
+# Image / Video / Audio / 3D
 DOMAIN-SUFFIX,clipdrop.co
 DOMAIN-SUFFIX,comfy.org
 DOMAIN-SUFFIX,comfyci.org
@@ -232,23 +272,23 @@ DOMAIN-SUFFIX,spicywriter.com
 # ========================================
 # SECTION 13: SENTX AI
 # ========================================
-DOMAIN-SUFFIX, sentx.ai
 
+DOMAIN-SUFFIX,sentx.ai
 
 # ========================================
 # SECTION 14: OTHER MAINSTREAM AI SERVICES
 # ========================================
+
 DOMAIN-SUFFIX,agentclientprotocol.com
 DOMAIN-SUFFIX,ai.azure.com
 DOMAIN-SUFFIX,ai.studio
 DOMAIN-SUFFIX,arena.ai
 DOMAIN-SUFFIX,byteoversea.com
 DOMAIN-SUFFIX,cerebras.ai
-DOMAIN-SUFFIX,chat.com
-DOMAIN-SUFFIX,chatgpt.site
 DOMAIN-SUFFIX,cici.com
 DOMAIN-SUFFIX,ciciai.com
 DOMAIN-SUFFIX,ciciaicdn.com
+DOMAIN-SUFFIX,chatgpt.site
 DOMAIN-SUFFIX,clawhub.ai
 DOMAIN-SUFFIX,cohere.ai
 DOMAIN-SUFFIX,cohere.com
@@ -278,14 +318,15 @@ DOMAIN-SUFFIX,oystermercury.top
 DOMAIN-SUFFIX,sider.ai
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN-SUFFIX,themeforest.net
-DOMAIN-SUFFIX,gateway.icloud.com
 DOMAIN-SUFFIX,gateway.ai.cloudflare.com
 
 # ========================================
-# SECTION 15: KEYWORDS (Fallback for any missed subdomains)
+# SECTION 15: KEYWORD FALLBACK
 # ========================================
+
 DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
 DOMAIN-KEYWORD,labs.google
 DOMAIN-KEYWORD,notebooklm.google
+DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,openaiapi
 DOMAIN-KEYWORD,openaicom
