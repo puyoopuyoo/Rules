@@ -1,0 +1,38 @@
+#台湾节点
+DOMAIN-SUFFIX, cdn.hinet.net, 台湾自动策略
+DOMAIN-SUFFIX, infini.money, 台湾自动策略
+DOMAIN-SUFFIX, 4gtv.tv, 台湾自动策略
+DOMAIN-SUFFIX, ofiii.com, 台湾自动策略
+DOMAIN-SUFFIX, 88168138.xyz, 台湾自动策略
+DOMAIN, 4gtv.cnlive.club, 台湾自动策略
+#香港节点
+DOMAIN-SUFFIX, hoy.tv, 香港自动策略
+DOMAIN-SUFFIX, tvb.com, 香港自动策略
+DOMAIN-SUFFIX, hrtn.net, 香港自动策略
+DOMAIN-SUFFIX, 163189.xyz, 香港自动策略
+DOMAIN-SUFFIX, 112114.xyz, 香港自动策略
+DOMAIN-SUFFIX, indevs.in, 香港自动策略
+DOMAIN-SUFFIX, fengshows.cn, 香港自动策略
+DOMAIN-SUFFIX, 1678520.xyz, 香港自动策略
+DOMAIN-SUFFIX, jdshipin.com, 香港自动策略
+DOMAIN, mytv.cdn.loc.cc, 香港自动策略
+#美国节点
+DOMAIN-SUFFIX, z2u.com, 美国自动策略
+DOMAIN-SUFFIX, amazonaws.com, 美国自动策略
+DOMAIN-SUFFIX, cloudflare.com, 美国自动策略
+DOMAIN-SUFFIX, nodeseek.com, 美国自动策略
+DOMAIN-SUFFIX, go-iptv.ggff.net, 美国自动策略
+DOMAIN-SUFFIX, lioncdn.net, 美国自动策略
+DOMAIN-SUFFIX, cluster-cz5nqyh5nreq6ua6gaqd7okl7o.cloudworkstations.dev, 美国自动策略
+DOMAIN-SUFFIX, qzz.io, 美国自动策略
+DOMAIN-SUFFIX, pendy.dpdns.org, 美国自动策略
+DOMAIN-SUFFIX, diver.eu.org, 美国自动策略
+DOMAIN-SUFFIX, judy.xx.kg, 美国自动策略
+DOMAIN-SUFFIX, 8plus.eu.org, 美国自动策略
+DOMAIN-SUFFIX, ru8.dpdns.org, 美国自动策略
+DOMAIN-SUFFIX, vip-tptv.xyz, 美国自动策略
+DOMAIN-SUFFIX, passwdword.xyz, 美国自动策略
+DOMAIN-SUFFIX, hudsonvalleyhost.com, 美国自动策略
+DOMAIN-SUFFIX, r2.hfyrw.com, 美国自动策略
+DOMAIN-SUFFIX, qichiyu.com, 美国自动策略
+DOMAIN, cdn6.cc.cd, 美国自动策略
