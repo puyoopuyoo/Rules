@@ -1,5 +1,5 @@
-#update:2026/08/01
-# > Apple 基础服务与 CDN
+# ===== 合并后的 Apple 服务规则集（2026-08-20） =====
+# > Apple 基础服务与 CDN（精确域名）
 DOMAIN,api-edge.apps.apple.com
 DOMAIN,api.apps.apple.com
 DOMAIN,apps.apple.com
@@ -43,13 +43,10 @@ DOMAIN,sq-device.apple.com
 DOMAIN,suconfig.apple.com
 DOMAIN,weather-data.apple.com
 DOMAIN,xp-cdn.apple.com
+# （非官方，请按需保留）
+DOMAIN,7h15.ru1353t.1s.m4d3.by.5ukk4w.skk.moe
 
-# > 国内 CDN 节点 & OCSP证书验证
-DOMAIN,k128-inapp.gslb.ksyuncdn.com
-DOMAIN,k128-iosapps-all.gslb.ksyuncdn.com
-DOMAIN,k128-mzstatic.gslb.ksyuncdn.com
-DOMAIN,k128-updates.gslb.ksyuncdn.com
-DOMAIN,k128.gslb.gslb.ksyuncdn.com
+# > 域名后缀（用于通配匹配）
 DOMAIN-SUFFIX,ocsp.apple.com
 DOMAIN-SUFFIX,aapl-edge0.qtlcdn.com
 DOMAIN-SUFFIX,apple.com.akadns.net
@@ -97,11 +94,19 @@ DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,push.apple.com.akadns.net
 DOMAIN-SUFFIX,audio-ssl.itunes.apple.com
 DOMAIN-SUFFIX,blobstore.apple.com
+DOMAIN-SUFFIX,appsto.re
+DOMAIN-SUFFIX,apple.news
+DOMAIN-SUFFIX,appstore.com
+DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,organicfruitapps.com
+
+# > 域名关键字
 DOMAIN-KEYWORD,buy.itunes.apple.com
 DOMAIN-KEYWORD,-cn.apple.com
 DOMAIN-KEYWORD,push-apple.com.akadns.net
 
-# > User-Agent (直连)
+# > User-Agent（直连匹配）
 USER-AGENT,%E5%9C%B0%E5%9B%BE*
 USER-AGENT,%E8%AE%BE%E7%BD%AE*
 USER-AGENT,*WeatherFoundation*
@@ -121,7 +126,17 @@ USER-AGENT,passd*
 USER-AGENT,com.apple.appstored*
 USER-AGENT,com.apple.trustd*
 
-# > IP-CIDR (直连)
+# > 进程名
+PROCESS-NAME,com.apple.geod
+PROCESS-NAME,mapspushd
+PROCESS-NAME,com.apple.Maps
+PROCESS-NAME,apsd
+PROCESS-NAME,fmfd
+PROCESS-NAME,findmydevice-user-agent
+PROCESS-NAME,CoreLocationAgent
+PROCESS-NAME,WeatherWidget
+
+# > IP-CIDR
 IP-CIDR,139.178.128.0/18,no-resolve
 IP-CIDR,144.178.0.0/19,no-resolve
 IP-CIDR,144.178.36.0/22,no-resolve
