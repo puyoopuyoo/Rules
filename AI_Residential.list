@@ -1,0 +1,149 @@
+# NAME: AI Residential
+# AUTHOR: puyoopuyoo
+# DESCRIPTION: AI services that may benefit from residential or high-quality ISP nodes
+# FORMAT: Loon Remote Rule
+# POLICY: AI-Residential
+# UPDATE: 2026-08-23
+#
+# INCLUDED:
+# OpenAI / ChatGPT / Sora
+# Google Gemini / AI Studio / NotebookLM
+# Anthropic / Claude
+# Meta AI
+# ElevenLabs
+#
+# EXCLUDED:
+# Mainland China AI services
+# Low-risk AI services
+# General cloud/CDN/auth/payment/analytics infrastructure
+#
+# NOTICE:
+# Residential IP is not officially required by these services.
+# A fixed, clean and region-supported exit IP is more important
+# than the residential label itself.
+
+
+# ========================================
+# SECTION 1: OPENAI / CHATGPT / SORA
+# ========================================
+
+# OpenAI dynamic Azure endpoints
+DOMAIN-KEYWORD,chatgpt-async-webps-prod-
+DOMAIN-KEYWORD,openaicom-api-
+
+# OpenAI narrowly scoped infrastructure
+DOMAIN,chat.openai.com.cdn.cloudflare.net
+DOMAIN,openai-api.arkoselabs.com
+DOMAIN,openai.com.cdn.cloudflare.net
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaicom.imgix.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,production-openaicom-storage.azureedge.net
+
+# ChatGPT voice and realtime infrastructure
+DOMAIN,chatgpt.livekit.cloud
+DOMAIN,host.livekit.cloud
+DOMAIN-SUFFIX,turn.livekit.cloud
+
+# OpenAI official domains
+DOMAIN-SUFFIX,ai.com
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaistatsig.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,sora.com
+
+
+# ========================================
+# SECTION 2: GOOGLE GEMINI / AI STUDIO
+# ========================================
+
+# Google AI frontend and API endpoints
+DOMAIN,ai.google.dev
+DOMAIN,alkalicore-pa.clients6.google.com
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,geller-pa.googleapis.com
+DOMAIN,makersuite.google.com
+DOMAIN,proactivebackend-pa.googleapis.com
+DOMAIN,robinfrontend-pa.googleapis.com
+DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com
+
+# Gemini
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,g.ai
+DOMAIN-SUFFIX,gemini.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,gemini.gstatic.com
+
+# Google AI Studio and Gemini API
+DOMAIN-SUFFIX,aisandbox-pa.googleapis.com
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+
+# NotebookLM
+DOMAIN,notebooklm-pa.googleapis.com
+DOMAIN,notebooklm.googleapis.com
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN-SUFFIX,notebooklm.google.com
+
+# Google Flow
+DOMAIN-SUFFIX,flow.google
+
+# Google Labs
+DOMAIN-SUFFIX,labs.google
+DOMAIN-SUFFIX,labs.google.com
+
+# Jules
+DOMAIN-SUFFIX,jules.google
+DOMAIN-SUFFIX,jules.google.com
+
+# Google Opal
+DOMAIN-SUFFIX,opal.google
+DOMAIN-SUFFIX,opal.google.com
+
+# Google Stitch
+DOMAIN-SUFFIX,stitch.withgoogle.com
+
+
+# ========================================
+# SECTION 3: ANTHROPIC / CLAUDE
+# ========================================
+
+# Anthropic narrowly scoped infrastructure
+DOMAIN,anthropic-com.ghost.io
+DOMAIN,anthropic.com.cdn.cloudflare.net
+DOMAIN,servd-anthropic-website.b-cdn.net
+
+# Anthropic and Claude official domains
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claudeusercontent.com
+
+# Anthropic network ranges
+IP-CIDR,160.79.104.0/23,no-resolve
+IP-CIDR6,2607:6bc0::/48,no-resolve
+
+
+# ========================================
+# SECTION 4: META AI
+# ========================================
+
+# Meta AI web service
+DOMAIN,imagine.meta.com
+DOMAIN-SUFFIX,meta.ai
+
+
+# ========================================
+# SECTION 5: ELEVENLABS
+# ========================================
+
+DOMAIN-SUFFIX,elevenlabs.com
+DOMAIN-SUFFIX,elevenlabs.io
