@@ -1,0 +1,5 @@
+https://raw.githubusercontent.com/puyoopuyoo/Rules/refs/heads/main/Apple915/icloud_private_relay.conf#type=domain-set, tag=iCloudPrivateRelay, force-policy=proxy, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/puyoopuyoo/Rules/refs/heads/main/Apple915/apple_cn_non_ip.conf, tag=AppleCN, force-policy=direct, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/puyoopuyoo/Rules/refs/heads/main/Apple915/apple_cdn.conf#type=domain-set, tag=AppleCDN, force-policy=direct, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/puyoopuyoo/Rules/refs/heads/main/Apple915/appleNoChinaCDN.list, tag=AppleNoChinaCDN, force-policy=proxy, enabled=true
+https://raw.githubusercontent.com/puyoopuyoo/Rules/refs/heads/main/Apple915/apple_services.conf, tag=AppleServices, force-policy=direct, opt-parser=true, enabled=true
