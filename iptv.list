@@ -36,3 +36,5 @@ DOMAIN-SUFFIX, hudsonvalleyhost.com, 美国自动策略
 DOMAIN-SUFFIX, r2.hfyrw.com, 美国自动策略
 DOMAIN-SUFFIX, qichiyu.com, 美国自动策略
 DOMAIN, cdn6.cc.cd, 美国自动策略
+DOMAIN, hxqapi.hiyun.tv, 韩国自动策略
+DOMAIN-KEYWORD, hanju, 韩国自动策略
