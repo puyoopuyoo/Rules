@@ -19,8 +19,6 @@ DOMAIN, mytv.cdn.loc.cc, 香港自动策略
 #美国节点
 DOMAIN-SUFFIX, z2u.com, 美国自动策略
 DOMAIN-SUFFIX, amazonaws.com, 美国自动策略
-DOMAIN-SUFFIX, cloudflare.com, 美国自动策略
-DOMAIN-SUFFIX, nodeseek.com, 美国自动策略
 DOMAIN-SUFFIX, go-iptv.ggff.net, 美国自动策略
 DOMAIN-SUFFIX, lioncdn.net, 美国自动策略
 DOMAIN-SUFFIX, cluster-cz5nqyh5nreq6ua6gaqd7okl7o.cloudworkstations.dev, 美国自动策略
@@ -35,6 +33,9 @@ DOMAIN-SUFFIX, passwdword.xyz, 美国自动策略
 DOMAIN-SUFFIX, hudsonvalleyhost.com, 美国自动策略
 DOMAIN-SUFFIX, r2.hfyrw.com, 美国自动策略
 DOMAIN-SUFFIX, qichiyu.com, 美国自动策略
+DOMAIN-SUFFIX, hqporner.com, 美国自动策略
+DOMAIN-SUFFIX, mydaddy.cc, 美国自动策略
+DOMAIN-SUFFIX, bigcdn.xx, 美国自动策略
 DOMAIN, cdn6.cc.cd, 美国自动策略
 DOMAIN, hxqapi.hiyun.tv, 韩国自动策略
 DOMAIN-KEYWORD, hanju, 韩国自动策略
